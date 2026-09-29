@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EmerTezora</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #111827;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 450px;
+            padding: 35px 25px;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .cta,
+        .telegram-btn {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta {
+            background: #229ed9;
+            color: white;
+        }
+
+        .telegram-btn {
+            background: #229ed9;
+            color: white;
+            margin-top: 15px;
+        }
+
+        .cta:hover,
+        .telegram-btn:hover {
+            opacity: 0.9;
+        }
+
+        .countdown {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #6b7280;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="icon">🌌</div>
+
+        <h1>Get EmerTezora Link</h1>
+
+        <p>
+            Continue to EmerTezora - quantum mechanics learning platform.
+        </p>
+
+        <!-- Initial button -->
+        <button id="startButton" class="cta" onclick="startProcess()">
+            🚀 Continue
+        </button>
+
+        <!-- Countdown -->
+        <div id="countdownBox" class="countdown hidden">
+            Preparing your link...<br>
+            <strong id="countdown">5</strong>
+        </div>
+
+        <!-- Telegram button -->
+        <div id="telegramBox" class="hidden">
+
+            <a id="telegramButton" class="telegram-btn" href="#" target="_blank" rel="noopener noreferrer">
+                📲 Open emertezora
+            </a>
+
+        </div>
+
+        <div class="note">
+            Sponsored content may open in a separate tab.
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // ==========================================
+        // CONFIGURATION
+        // ==========================================
+
+        const ADSTERRA_URL =
+            "https://www.profitableratecpmnetwork.com/m30n2qq47?key=06bdd32768d140a25e8d7c785f04ab28";
+
+        const EMERTEZORA_URL =
+            "https://www.emertezora.xyz";
+
+        const COUNTDOWN_SECONDS = 5;
+
+
+        // ==========================================
+        // START PROCESS
+        // ==========================================
+
+        function startProcess() {
+
+            // Prevent multiple clicks
+            const startButton = document.getElementById("startButton");
+
+            startButton.disabled = true;
+            startButton.style.opacity = "0.6";
+
+            // Open Monetag first
+            window.open(
+                ADSTERRA_URL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+            // Show countdown
+            const countdownBox =
+                document.getElementById("countdownBox");
+
+            const countdownElement =
+                document.getElementById("countdown");
+
+            countdownBox.classList.remove("hidden");
+
+            let remaining = COUNTDOWN_SECONDS;
+
+            countdownElement.textContent = remaining;
+
+            const timer = setInterval(() => {
+
+                remaining--;
+
+                countdownElement.textContent = remaining;
+
+                if (remaining <= 0) {
+
+                    clearInterval(timer);
+
+                    showTelegramButton();
+
+                }
+
+            }, 1000);
+        }
+
+
+        // ==========================================
+        // SHOW EMERTEZORA BUTTON
+        // ==========================================
+
+        function showTelegramButton() {
+
+            const countdownBox =
+                document.getElementById("countdownBox");
+
+            const telegramBox =
+                document.getElementById("telegramBox");
+
+            const telegramButton =
+                document.getElementById("telegramButton");
+
+            countdownBox.classList.add("hidden");
+
+            telegramButton.href = EMERTEZORA_URL;
+
+            telegramBox.classList.remove("hidden");
+        }
+
+    </script>
+
+</body>
+
+</html>
